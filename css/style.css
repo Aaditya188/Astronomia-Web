@@ -1,0 +1,955 @@
+/*................................reset...........................................*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*................................clearfix...........................................*/
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+.clearfix {
+	display: inline-block;
+}
+/* start commented backslash hack \*/
+* html .clearfix {
+	height: 1%;
+}
+.clearfix {
+	display: block;
+}
+/*.........GLOBLE......*/
+
+body {
+	font-family: 'Raleway', sans-serif;
+	font-size: 18px;
+	line-height: 30px;
+	font-weight: 400;
+	color:  #414a4c;
+	letter-spacing: 0.25px;
+}
+header {
+	position: absolute;
+	left: 0;
+	right: 0;
+	padding: 10px 0;
+	width: 100%;
+	z-index: 9997;
+	-webkit-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+header.sticky {
+	position: fixed;
+	width: 100%;
+	background: blueviolet;
+	opacity: 0.6;
+	box-shadow: 3px 1px 0.99px 0.01px rgba(0, 0, 0, 0.05);
+	padding: 10px 0;
+}
+.logo {
+	width: 30%;
+	float: left;
+	padding-top: 5px;
+}
+.logo h1 a img {
+	display: block;
+}
+nav {
+	width: 65%;
+	float: left;
+	text-align: right;
+	margin-right: 30px;
+}
+.search {
+	width: 5%;
+	float: right;
+	position: absolute;
+	right: 0;
+}
+nav ul li {
+	text-decoration: none;
+	display: inline-block;
+	padding: 10px 25px;
+}
+nav ul li a {
+	font-size: 14px;
+	line-height: 24px;
+	color: #ffffff;
+	font-weight: 700;
+	letter-spacing: 0.25px;
+}
+nav ul li a:hover {
+	color: yellow;
+	transition: all 0.5s;
+}
+#wrap {
+	display: inline-block;
+	position: relative;
+	height: 40px;
+	float: right;
+	padding: 0;
+	position: relative;
+}
+.search input[type="text"] {
+	height: 50px;
+	font-size: 20px;
+	display: inline-block;
+	font-weight: 400;
+	border: none;
+	outline: none;
+	color: #fff;
+	padding: 3px;
+	padding-right: 60px;
+	width: 0px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: none;
+	z-index: 3;
+	
+	transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+	cursor: pointer;
+}
+.search input[type="text"]:focus:hover {
+	
+}
+.search input[type="text"]:focus {
+	width: 430px;
+	z-index: 1;
+	border-bottom: 1px solid #BBB;
+	cursor: text;
+	background: #2dddac;
+}
+.sticky .search input[type="text"]:focus{background:#000;}
+.search input[type="submit"] {
+	height: 50px;
+	width: 50px;
+	display: inline-block;
+	color: #000;
+	float: right;
+	background: url(images/search.png) center center no-repeat;
+	text-indent: -10000px;
+	border: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	outline:0;
+	z-index: 2;
+	cursor: pointer;
+	opacity: 1;
+	cursor: pointer;
+	transition: opacity .4s ease;
+}
+.search input[type="text"]:focus > .search input[type="submit"] {
+	background-color: none;
+}
+.search input[type="submit"]:hover {
+	opacity: 1;
+}
+.oneslide img {
+
+	width: 100%;
+	display: block;
+	position: relative;
+	height: 850px;
+}
+.slidecon {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 40%;
+	text-align: center;
+}
+.slidecon p {
+	font-size: 24px;
+	color: #fff;
+	line-height: 60px;
+}
+.slidecon h2 {
+	font-size: 60px;
+	line-height: 60px;
+	font-weight: 100;
+	letter-spacing: 0.25px;
+	color: #fff;
+	padding: 0px 0 20px;
+}
+.slidecon h2 span {
+	font-weight: 700;
+}
+.slidecon a {
+	width: 180px;
+	border: 2px solid #fff;
+	color: #fff;
+	border-radius: 50px;
+	display: block;
+	margin: 40px auto;
+	padding: 8px 0;
+}
+.slidecon a:hover {
+	background: #fff;
+	color: #000;
+	transition: all 0.5s;
+}
+.aboutus {
+	text-align: center;
+	padding: 100px 0;
+}
+.aboutus h2 {
+	color: #576671;
+	font-size: 60px;
+	line-height: 90px;
+	font-weight: 200;
+}
+.line {
+	height: 1px;
+	width: 30px;
+	background: #17daa3;
+	margin: 0 auto;
+}
+.aboutus p.top {
+	padding: 35px 0 110px;
+	font-size: 18px;
+}
+.aboutus i {
+	width: 182px;
+	height: 182px;
+	border-radius: 50%;
+	background: #edeff1;
+	text-align: center;
+	padding-top: 25%;
+	font-size: 60px;
+	color: #87949e;
+}
+.aboutus h3 {
+	font-size: 30px;
+	color: #000;
+	line-height: 30px;
+	padding: 55px 0 25px;
+}
+.aboutus p {
+	font-size: 16px;
+}
+.aboutus i:hover {
+	background: #17daa3;
+	color: #fff;
+	transition: all 0.5s;
+}
+.aboutus a {
+	width: 180px;
+	border: 2px solid #fff;
+	color: #fff;
+	background: #17daa3;
+	border-radius: 50px;
+	display: block;
+	margin: 100px auto 0;
+	padding: 8px 0;
+}
+.aboutus a:hover {
+	background: #000;
+	color: #fff;
+	transition: all 0.5s;
+}
+.lorem {
+	background: #f9f9fa;
+	padding: 75px 0 40px;
+}
+#dorem {
+	background: #fff;
+}
+.lorem img {
+	display: block;
+}
+.lorem h2 {
+	font-size: 60px;
+	line-height: 96px;
+	font-weight: 200;
+}
+.lorem p {
+	padding: 50px 0;
+}
+.lorem a {
+	width: 180px;
+	border: 2px solid #fff;
+	color: #fff;
+	background: #17daa3;
+	border-radius: 50px;
+	display: block;
+	text-align: center;
+	padding: 8px 0;
+}
+.lorem a:hover {
+	background: #000;
+	color: #fff;
+	transition: all 0.5s;
+}
+.testimonials {
+	background: url(images/testimonials.jpg) no-repeat center center;
+	min-height: 700px;
+	background-size: cover;
+	display: block;
+	text-align: center;
+	padding: 185px 0 130px;
+}
+.testimonials h2 {
+	font-size: 30px;
+	line-height: 96px;
+	color: #fff;
+	font-weight: 300;
+}
+.testimonials img {
+	display: block;
+	margin: 0 auto;
+}
+.testimonials h2 span {
+	color: #17daa3;
+}
+.testimonials p {
+	color: rgba(255,255,255,0.3);
+	margin-bottom: 100px;
+}
+.testimonials .bx-wrapper .bx-prev {
+	left: 10px;
+}
+.testimonials .bx-wrapper .bx-next {
+	right: 10px;
+}
+.testimonials .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+	bottom: 1%;
+}
+.services {
+	background: #f9f9fa;
+	padding: 100px 0 50px;
+}
+.services h2 {
+	font-size: 60px;
+	line-height: 93px;
+	font-weight: 200;
+}
+.services h2.centerdata {
+	text-align: center;
+}
+.services p.top {
+	padding: 35px 0 110px;
+	font-size: 18px;
+	text-align: center;
+}
+.leftside {
+	width: 20%;
+	float: left;
+}
+.rightside {
+	width: 80%;
+	float: left;
+}
+.leftside i {
+	width: 83px;
+	height: 83px;
+	border-radius: 50%;
+	background: #fff;
+	color: #17daa3;
+	text-align: center;
+	font-size: 40px;
+	padding-top: 25px;
+}
+.services p {
+	font-size: 16px;
+	padding-bottom: 60px;
+}
+.team {
+	padding: 100px 0;
+	text-align: center;
+}
+.team h2 {
+	font-size: 60px;
+	line-height: 93px;
+	font-weight: 200;
+}
+.team p {
+	padding-top: 20px;
+}
+.team1 {
+	width: 20%;
+	float: left;
+	position: relative;
+}
+.team1 img {
+	width: 100%;
+	display: block;
+}
+.members {
+}
+.imgDescription2 {
+	position: absolute;
+	top: 0px;
+	bottom: 0;
+	left: 0px;
+	right: 0;
+	background: rgba(45,221,172,0.5);
+	color: #fff;
+	width: 100%;
+	height: auto;
+	font-size: 18px;
+	font-weight: 400;
+	text-align: center;
+	visibility: hidden;
+	opacity: 0;
+	padding-top: 50%;
+	transition: all 0.5s;
+	cursor: pointer;/*remove comment if you want a gradual transition between states
+  -webkit-transition: visibility opacity 0.2s;
+  */
+}
+.team1:hover .imgDescription2 {
+	visibility: visible;
+	opacity: 1;
+}
+.imgDescription2 p {
+	font-size: 36px;
+	color: #fff;
+	font-weight: 300;
+}
+.price {
+	padding: 100px 0;
+	background: #f9f9fa;
+}
+.price h2 {
+	font-size: 60px;
+	line-height: 93px;
+	font-weight: 200;
+}
+.price h2.centerdata {
+	text-align: center;
+}
+.price p.top {
+	padding: 35px 0 110px;
+	font-size: 18px;
+	text-align: center;
+}
+.datapack {
+	background: #17daa3;
+	border-radius: 8px;
+	box-shadow: 0px 0px 35px 0px rgba(227, 227, 227, 0.65);
+}
+.p1 {
+	background: #fff;
+	padding: 20px;
+	border-bottom: 1px solid #eeeff1;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.p2 {
+	background: #fff;
+	padding: 20px;
+	font-size: 16px;
+	line-height: 40px;
+}
+.p3 {
+	padding: 15px 20px;
+	color:#fff;
+	background: #17daa3;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.p3:hover {background:#333;}
+.p3 a {
+	color: #fff;
+	font-size: 16px;
+}
+.datapack h3 {
+	font-size: 40px;
+	line-height: 70px;
+	color: #17daa3;
+	font-weight: 200;
+}
+.datapack span {
+	color: #87949e;
+}
+.datapack i{float:right; font-size:22px; padding-top:3px;}
+.mapsec{padding:100px 0;}
+.mapsec h2 {
+	font-size: 60px;
+	line-height: 96px;
+	font-weight: 200;
+}
+.mapsec p {
+	padding: 50px 0;
+}
+.mapsec a {
+	width: 180px;
+	border: 2px solid #fff;
+	color: #fff;
+	background: #17daa3;
+	border-radius: 50px;
+	display: block;
+	text-align: center;
+	padding: 8px 0;
+}
+.mapsec a:hover {
+	background: #000;
+	color: #fff;
+	transition: all 0.5s;
+}
+
+.last{
+	text-align:center;
+	background:url(../images/last.jpg) no-repeat center center;
+	padding:250px 0;
+}
+.last h2{
+	font-size:60px;
+	line-height:90px;
+	color:#fff;
+	font-weight:200;
+		
+}
+.last h2 span{font-weight:600;}
+.last a {
+	width: 180px;
+	color: #fff;
+	background: #17daa3;
+	border-radius: 50px;
+	display: block;
+	text-align: center;
+	padding: 8px 0;
+	margin:80px auto 0;
+}
+.last a:hover {
+	background: #fff;
+	color: #000;
+	transition: all 0.5s;
+}
+.mapsec img{width:100%; display:block;}
+min-height:500px;
+padding-top:50px;
+}
+footer h2{
+	display:block;	
+	color:#000;
+}
+footer h2 img{
+	margin-right:10px;
+	position:relative;
+	top:5px;
+}
+footer ul{text-align:right;}
+footer ul li{display:inline-block; margin-left:40px;}
+footer ul li a{
+	color:#000;	
+}
+footer ul li a:hover , footer p a:hover{
+	color:#2dddac;	
+}
+footer p , footer p a{
+	color:#000;
+}
+
+/* New */
+
+.os-animation {
+	opacity: 0;
+}
+.os-animation.animated {
+	opacity: 1;
+}
+.staggered-animation {
+	opacity: 0;
+}
+.staggered-animation.animated {
+	opacity: 1;
+}
+/*LOADER EFFECT*/
+/*Paste this css to your style sheet file or under head tag*/
+/* This only works with JavaScript, 
+if it's not present, don't show loader */
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+ position: fixed;
+ left: 0px;
+ top: 0px;
+ width: 100%;
+ height: 100%;
+ z-index: 9998;
+ background: #414a4c;
+}
+
+
+
+
+.cssload-container {
+	width: 12em;
+	height: 1.5em;
+}
+.cssload-container, .cssload-container *, .cssload-container *:before, .cssload-container *:after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	transform-style: preserve-3d;
+		-o-transform-style: preserve-3d;
+		-ms-transform-style: preserve-3d;
+		-webkit-transform-style: preserve-3d;
+		-moz-transform-style: preserve-3d;
+}
+
+.cssload-container *:before, .cssload-container *:after {
+	content: "";
+}
+
+.thing:before, .thing:after {
+	right: auto;
+	width: 1.5em;
+	height: 0.09375em;
+	background: rgb(20,18,20);
+	-ms-transform-origin: right bottom 0 50%;
+}
+.thing:nth-child(1):before, .thing:nth-child(1):after {
+	left: 0em;
+}
+.thing:nth-child(1):before {
+	animation: thing 1.15s -0s linear infinite alternate;
+		-o-animation: thing 1.15s -0s linear infinite alternate;
+		-ms-animation: thing 1.15s -0s linear infinite alternate;
+		-webkit-animation: thing 1.15s -0s linear infinite alternate;
+		-moz-animation: thing 1.15s -0s linear infinite alternate;
+}
+.thing:nth-child(1):after {
+	animation: thing 1.15s -0s linear infinite alternate-reverse;
+		-o-animation: thing 1.15s -0s linear infinite alternate-reverse;
+		-ms-animation: thing 1.15s -0s linear infinite alternate-reverse;
+		-webkit-animation: thing 1.15s -0s linear infinite alternate-reverse;
+		-moz-animation: thing 1.15s -0s linear infinite alternate-reverse;
+}
+.thing:nth-child(2):before, .thing:nth-child(2):after {
+	left: 0.75em;
+}
+.thing:nth-child(2):before {
+	animation: thing 1.15s -0.07s linear infinite alternate;
+		-o-animation: thing 1.15s -0.07s linear infinite alternate;
+		-ms-animation: thing 1.15s -0.07s linear infinite alternate;
+		-webkit-animation: thing 1.15s -0.07s linear infinite alternate;
+		-moz-animation: thing 1.15s -0.07s linear infinite alternate;
+}
+.thing:nth-child(2):after {
+	animation: thing 1.15s -0.07s linear infinite alternate-reverse;
+		-o-animation: thing 1.15s -0.07s linear infinite alternate-reverse;
+		-ms-animation: thing 1.15s -0.07s linear infinite alternate-reverse;
+		-webkit-animation: thing 1.15s -0.07s linear infinite alternate-reverse;
+		-moz-animation: thing 1.15s -0.07s linear infinite alternate-reverse;
+}
+.thing:nth-child(3):before, .thing:nth-child(3):after {
+	left: 1.5em;
+}
+.thing:nth-child(3):before {
+	animation: thing 1.15s -0.14s linear infinite alternate;
+		-o-animation: thing 1.15s -0.14s linear infinite alternate;
+		-ms-animation: thing 1.15s -0.14s linear infinite alternate;
+		-webkit-animation: thing 1.15s -0.14s linear infinite alternate;
+		-moz-animation: thing 1.15s -0.14s linear infinite alternate;
+}
+.thing:nth-child(3):after {
+	animation: thing 1.15s -0.14s linear infinite alternate-reverse;
+		-o-animation: thing 1.15s -0.14s linear infinite alternate-reverse;
+		-ms-animation: thing 1.15s -0.14s linear infinite alternate-reverse;
+		-webkit-animation: thing 1.15s -0.14s linear infinite alternate-reverse;
+		-moz-animation: thing 1.15s -0.14s linear infinite alternate-reverse;
+}
+.thing:nth-child(4):before, .thing:nth-child(4):after {
+	left: 2.25em;
+}
+.thing:nth-child(4):before {
+	animation: thing 1.15s -0.22s linear infinite alternate;
+		-o-animation: thing 1.15s -0.22s linear infinite alternate;
+		-ms-animation: thing 1.15s -0.22s linear infinite alternate;
+		-webkit-animation: thing 1.15s -0.22s linear infinite alternate;
+		-moz-animation: thing 1.15s -0.22s linear infinite alternate;
+}
+.thing:nth-child(4):after {
+	animation: thing 1.15s -0.22s linear infinite alternate-reverse;
+		-o-animation: thing 1.15s -0.22s linear infinite alternate-reverse;
+		-ms-animation: thing 1.15s -0.22s linear infinite alternate-reverse;
+		-webkit-animation: thing 1.15s -0.22s linear infinite alternate-reverse;
+		-moz-animation: thing 1.15s -0.22s linear infinite alternate-reverse;
+}
+.thing:nth-child(5):before, .thing:nth-child(5):after {
+	left: 3em;
+}
+.thing:nth-child(5):before {
+	animation: thing 1.15s -0.29s linear infinite alternate;
+		-o-animation: thing 1.15s -0.29s linear infinite alternate;
+		-ms-animation: thing 1.15s -0.29s linear infinite alternate;
+		-webkit-animation: thing 1.15s -0.29s linear infinite alternate;
+		-moz-animation: thing 1.15s -0.29s linear infinite alternate;
+}
+.thing:nth-child(5):after {
+	animation: thing 1.15s -0.29s linear infinite alternate-reverse;
+		-o-animation: thing 1.15s -0.29s linear infinite alternate-reverse;
+		-ms-animation: thing 1.15s -0.29s linear infinite alternate-reverse;
+		-webkit-animation: thing 1.15s -0.29s linear infinite alternate-reverse;
+		-moz-animation: thing 1.15s -0.29s linear infinite alternate-reverse;
+}
+.thing:nth-child(6):before, .thing:nth-child(6):after {
+	left: 3.75em;
+}
+.thing:nth-child(6):before {
+	animation: thing 1.15s -0.36s linear infinite alternate;
+		-o-animation: thing 1.15s -0.36s linear infinite alternate;
+		-ms-animation: thing 1.15s -0.36s linear infinite alternate;
+		-webkit-animation: thing 1.15s -0.36s linear infinite alternate;
+		-moz-animation: thing 1.15s -0.36s linear infinite alternate;
+}
+.thing:nth-child(6):after {
+	animation: thing 1.15s -0.36s linear infinite alternate-reverse;
+		-o-animation: thing 1.15s -0.36s linear infinite alternate-reverse;
+		-ms-animation: thing 1.15s -0.36s linear infinite alternate-reverse;
+		-webkit-animation: thing 1.15s -0.36s linear infinite alternate-reverse;
+		-moz-animation: thing 1.15s -0.36s linear infinite alternate-reverse;
+}
+.thing:nth-child(7):before, .thing:nth-child(7):after {
+	left: 4.5em;
+}
+.thing:nth-child(7):before {
+	animation: thing 1.15s -0.43s linear infinite alternate;
+		-o-animation: thing 1.15s -0.43s linear infinite alternate;
+		-ms-animation: thing 1.15s -0.43s linear infinite alternate;
+		-webkit-animation: thing 1.15s -0.43s linear infinite alternate;
+		-moz-animation: thing 1.15s -0.43s linear infinite alternate;
+}
+.thing:nth-child(7):after {
+	animation: thing 1.15s -0.43s linear infinite alternate-reverse;
+		-o-animation: thing 1.15s -0.43s linear infinite alternate-reverse;
+		-ms-animation: thing 1.15s -0.43s linear infinite alternate-reverse;
+		-webkit-animation: thing 1.15s -0.43s linear infinite alternate-reverse;
+		-moz-animation: thing 1.15s -0.43s linear infinite alternate-reverse;
+}
+.thing:nth-child(8):before, .thing:nth-child(8):after {
+	left: 5.25em;
+}
+.thing:nth-child(8):before {
+	animation: thing 1.15s -0.5s linear infinite alternate;
+		-o-animation: thing 1.15s -0.5s linear infinite alternate;
+		-ms-animation: thing 1.15s -0.5s linear infinite alternate;
+		-webkit-animation: thing 1.15s -0.5s linear infinite alternate;
+		-moz-animation: thing 1.15s -0.5s linear infinite alternate;
+}
+.thing:nth-child(8):after {
+	animation: thing 1.15s -0.5s linear infinite alternate-reverse;
+		-o-animation: thing 1.15s -0.5s linear infinite alternate-reverse;
+		-ms-animation: thing 1.15s -0.5s linear infinite alternate-reverse;
+		-webkit-animation: thing 1.15s -0.5s linear infinite alternate-reverse;
+		-moz-animation: thing 1.15s -0.5s linear infinite alternate-reverse;
+}
+.thing:nth-child(9):before, .thing:nth-child(9):after {
+	left: 6em;
+}
+.thing:nth-child(9):before {
+	animation: thing 1.15s -0.58s linear infinite alternate;
+		-o-animation: thing 1.15s -0.58s linear infinite alternate;
+		-ms-animation: thing 1.15s -0.58s linear infinite alternate;
+		-webkit-animation: thing 1.15s -0.58s linear infinite alternate;
+		-moz-animation: thing 1.15s -0.58s linear infinite alternate;
+}
+.thing:nth-child(9):after {
+	animation: thing 1.15s -0.58s linear infinite alternate-reverse;
+		-o-animation: thing 1.15s -0.58s linear infinite alternate-reverse;
+		-ms-animation: thing 1.15s -0.58s linear infinite alternate-reverse;
+		-webkit-animation: thing 1.15s -0.58s linear infinite alternate-reverse;
+		-moz-animation: thing 1.15s -0.58s linear infinite alternate-reverse;
+}
+.thing:nth-child(10):before, .thing:nth-child(10):after {
+	left: 6.75em;
+}
+.thing:nth-child(10):before {
+	animation: thing 1.15s -0.65s linear infinite alternate;
+		-o-animation: thing 1.15s -0.65s linear infinite alternate;
+		-ms-animation: thing 1.15s -0.65s linear infinite alternate;
+		-webkit-animation: thing 1.15s -0.65s linear infinite alternate;
+		-moz-animation: thing 1.15s -0.65s linear infinite alternate;
+}
+.thing:nth-child(10):after {
+	animation: thing 1.15s -0.65s linear infinite alternate-reverse;
+		-o-animation: thing 1.15s -0.65s linear infinite alternate-reverse;
+		-ms-animation: thing 1.15s -0.65s linear infinite alternate-reverse;
+		-webkit-animation: thing 1.15s -0.65s linear infinite alternate-reverse;
+		-moz-animation: thing 1.15s -0.65s linear infinite alternate-reverse;
+}
+.thing:nth-child(11):before, .thing:nth-child(11):after {
+	left: 7.5em;
+}
+.thing:nth-child(11):before {
+	animation: thing 1.15s -0.72s linear infinite alternate;
+		-o-animation: thing 1.15s -0.72s linear infinite alternate;
+		-ms-animation: thing 1.15s -0.72s linear infinite alternate;
+		-webkit-animation: thing 1.15s -0.72s linear infinite alternate;
+		-moz-animation: thing 1.15s -0.72s linear infinite alternate;
+}
+.thing:nth-child(11):after {
+	animation: thing 1.15s -0.72s linear infinite alternate-reverse;
+		-o-animation: thing 1.15s -0.72s linear infinite alternate-reverse;
+		-ms-animation: thing 1.15s -0.72s linear infinite alternate-reverse;
+		-webkit-animation: thing 1.15s -0.72s linear infinite alternate-reverse;
+		-moz-animation: thing 1.15s -0.72s linear infinite alternate-reverse;
+}
+.thing:nth-child(12):before, .thing:nth-child(12):after {
+	left: 8.25em;
+}
+.thing:nth-child(12):before {
+	animation: thing 1.15s -0.79s linear infinite alternate;
+		-o-animation: thing 1.15s -0.79s linear infinite alternate;
+		-ms-animation: thing 1.15s -0.79s linear infinite alternate;
+		-webkit-animation: thing 1.15s -0.79s linear infinite alternate;
+		-moz-animation: thing 1.15s -0.79s linear infinite alternate;
+}
+.thing:nth-child(12):after {
+	animation: thing 1.15s -0.79s linear infinite alternate-reverse;
+		-o-animation: thing 1.15s -0.79s linear infinite alternate-reverse;
+		-ms-animation: thing 1.15s -0.79s linear infinite alternate-reverse;
+		-webkit-animation: thing 1.15s -0.79s linear infinite alternate-reverse;
+		-moz-animation: thing 1.15s -0.79s linear infinite alternate-reverse;
+}
+.thing:nth-child(13):before, .thing:nth-child(13):after {
+	left: 9em;
+}
+.thing:nth-child(13):before {
+	animation: thing 1.15s -0.86s linear infinite alternate;
+		-o-animation: thing 1.15s -0.86s linear infinite alternate;
+		-ms-animation: thing 1.15s -0.86s linear infinite alternate;
+		-webkit-animation: thing 1.15s -0.86s linear infinite alternate;
+		-moz-animation: thing 1.15s -0.86s linear infinite alternate;
+}
+.thing:nth-child(13):after {
+	animation: thing 1.15s -0.86s linear infinite alternate-reverse;
+		-o-animation: thing 1.15s -0.86s linear infinite alternate-reverse;
+		-ms-animation: thing 1.15s -0.86s linear infinite alternate-reverse;
+		-webkit-animation: thing 1.15s -0.86s linear infinite alternate-reverse;
+		-moz-animation: thing 1.15s -0.86s linear infinite alternate-reverse;
+}
+.thing:nth-child(14):before, .thing:nth-child(14):after {
+	left: 9.75em;
+}
+.thing:nth-child(14):before {
+	animation: thing 1.15s -0.93s linear infinite alternate;
+		-o-animation: thing 1.15s -0.93s linear infinite alternate;
+		-ms-animation: thing 1.15s -0.93s linear infinite alternate;
+		-webkit-animation: thing 1.15s -0.93s linear infinite alternate;
+		-moz-animation: thing 1.15s -0.93s linear infinite alternate;
+}
+.thing:nth-child(14):after {
+	animation: thing 1.15s -0.93s linear infinite alternate-reverse;
+		-o-animation: thing 1.15s -0.93s linear infinite alternate-reverse;
+		-ms-animation: thing 1.15s -0.93s linear infinite alternate-reverse;
+		-webkit-animation: thing 1.15s -0.93s linear infinite alternate-reverse;
+		-moz-animation: thing 1.15s -0.93s linear infinite alternate-reverse;
+}
+.thing:nth-child(15):before, .thing:nth-child(15):after {
+	left: 10.5em;
+}
+.thing:nth-child(15):before {
+	animation: thing 1.15s -1.01s linear infinite alternate;
+		-o-animation: thing 1.15s -1.01s linear infinite alternate;
+		-ms-animation: thing 1.15s -1.01s linear infinite alternate;
+		-webkit-animation: thing 1.15s -1.01s linear infinite alternate;
+		-moz-animation: thing 1.15s -1.01s linear infinite alternate;
+}
+.thing:nth-child(15):after {
+	animation: thing 1.15s -1.01s linear infinite alternate-reverse;
+		-o-animation: thing 1.15s -1.01s linear infinite alternate-reverse;
+		-ms-animation: thing 1.15s -1.01s linear infinite alternate-reverse;
+		-webkit-animation: thing 1.15s -1.01s linear infinite alternate-reverse;
+		-moz-animation: thing 1.15s -1.01s linear infinite alternate-reverse;
+}
+.thing:nth-child(16):before, .thing:nth-child(16):after {
+	left: 11.25em;
+}
+.thing:nth-child(16):before {
+	animation: thing 1.15s -1.08s linear infinite alternate;
+		-o-animation: thing 1.15s -1.08s linear infinite alternate;
+		-ms-animation: thing 1.15s -1.08s linear infinite alternate;
+		-webkit-animation: thing 1.15s -1.08s linear infinite alternate;
+		-moz-animation: thing 1.15s -1.08s linear infinite alternate;
+}
+.thing:nth-child(16):after {
+	animation: thing 1.15s -1.08s linear infinite alternate-reverse;
+		-o-animation: thing 1.15s -1.08s linear infinite alternate-reverse;
+		-ms-animation: thing 1.15s -1.08s linear infinite alternate-reverse;
+		-webkit-animation: thing 1.15s -1.08s linear infinite alternate-reverse;
+		-moz-animation: thing 1.15s -1.08s linear infinite alternate-reverse;
+}
+
+
+@keyframes thing {
+	0% {
+		transform: rotateZ(45deg);
+	}
+	100% {
+		transform: rotateZ(-45deg);
+	}
+}
+
+@-o-keyframes thing {
+	0% {
+		-o-transform: rotateZ(45deg);
+	}
+	100% {
+		-o-transform: rotateZ(-45deg);
+	}
+}
+
+@-ms-keyframes thing {
+	0% {
+		-ms-transform: rotateZ(45deg);
+	}
+	100% {
+		-ms-transform: rotateZ(-45deg);
+	}
+}
+
+@-webkit-keyframes thing {
+	0% {
+		-webkit-transform: rotateZ(45deg);
+	}
+	100% {
+		-webkit-transform: rotateZ(-45deg);
+	}
+}
+
+@-moz-keyframes thing {
+	0% {
+		-moz-transform: rotateZ(45deg);
+	}
+	100% {
+		-moz-transform: rotateZ(-45deg);
+	}
+}
