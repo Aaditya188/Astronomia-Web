@@ -1,0 +1,69 @@
+// custom variables and override bootstrap variables
+$white:#fff;
+$gray:#242424;
+$gray2:#252525;
+$blue:#378cc0;
+$black:#000;
+$light-gray:#ebebeb;
+$dark-text:$gray2;
+$hightlight:$blue;
+$body-bg: $white;
+
+$text-color: $gray;
+$link-color:#333;
+
+$screen-md : 1025px;
+$screen-sm: 768px;
+$screen-lg:1240px;
+
+//== Typography
+$base-font-family: 'Lato', Arial, Helvetica, sans-serif;
+$serif-font-family: 'Playfair Display', Times New Roman, Times, serif;
+$font-size-base: 18px;
+$line-height-base: 1.555;
+$headings-font-family:$serif-font-family;
+$font-size-h1: ceil(($font-size-base * 4.72)); // ~85px
+$font-size-h2: ceil(($font-size-base * 2.66)); // ~48px
+$font-size-h3: ceil(($font-size-base * 1.66)); // ~30px
+$headings-color: $text-color;
+
+//== Grid system
+$grid-gutter-width: 30px;
+$container-tablet: (720px + $grid-gutter-width);
+$container-desktop:  (970px + $grid-gutter-width);
+$container-large-desktop:  (1170px + $grid-gutter-width);
+$grid-float-breakpoint: $screen-md;
+$grid-float-breakpoint-max: $grid-float-breakpoint - 1;
+
+// Basics of a navbar
+$navbar-height:auto;
+$navbar-margin-bottom: 0;
+$navbar-border-radius: 0;
+$navbar-padding-horizontal:0;
+$navbar-padding-vertical: 0;
+$navbar-collapse-max-height:340px;
+
+$navbar-default-color: transparent;
+$navbar-default-bg:rgba(0, 0, 0, 0);
+$navbar-default-border:none;
+
+$nav-link-padding:0;
+$navbar-default-link-color:$black;
+$navbar-default-link-hover-color:$black;
+$navbar-default-link-active-color:$black;
+
+$input-color-placeholder:#b9b9b9;
+
+$border-radius-base:0;
+
+//Buttons
+$btn-font-weight: normal;
+$btn-default-color: $text-color;
+$btn-default-bg: $light-gray;
+$btn-default-border: $light-gray;
+
+// Navbar toggle
+$navbar-default-toggle-hover-bg: transarent;
+$navbar-default-toggle-icon-bar-bg: $black;
+$navbar-default-toggle-border-color: $black;
+$nav-link-padding:10px;
